@@ -30,9 +30,7 @@ function Navigationbar() {
   return (
     <AppBar style={styles} className={classes.appbar}>
       <Toolbar>
-        <Typography>
-          <Search />
-        </Typography>
+        <Typography></Typography>
       </Toolbar>
     </AppBar>
   );
