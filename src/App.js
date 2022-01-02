@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import Box from "@mui/material/Box";
+// import { Route, Switch } from "react-router-dom";
+import { Sidebar } from "./Sidebar/sideBarcomponents";
+
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import { makeStyles } from "@mui/styles";
+import Button from "@mui/material/Button";
+import { red } from "@mui/material/colors";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigationbar />
+      <Sidebar />
     </div>
   );
 }
 
+const useStyles = makeStyles({
+  appbar: {
+    backgroundColor: "red",
+  },
+});
+function Navigationbar() {
+  const classes = useStyles();
+  const styles = { backgroundColor: "whitesmoke", zIndex: 1 };
+  return (
+    <AppBar style={styles} className={classes.appbar}>
+      <Toolbar>
+        <Typography>
+          <Search />
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+}
 export default App;

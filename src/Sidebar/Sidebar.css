@@ -1,0 +1,72 @@
+.sidebar{
+    height:100%;
+    background-color: #663fef;
+    position:absolute;
+    z-index: 1;
+    }
+    .sidebarList{
+      list-style: none;
+      margin:0px;
+      padding:0px;
+      color:white;
+  }
+  
+  @media screen and (max-width:600px){
+    .sidebar{
+    display: none;
+    }
+  }
+  .line{
+    height: 0.3px;
+    background: #9f9fb4;
+   margin-right: 12px;
+    
+   
+  }
+  .sidebar-emoji{
+    display:flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom:10px;
+    justify-content: space-evenly;
+    
+  }
+  .sidebar-menu{
+    color:white;
+    font-size:10px;
+  }
+  .sidebar-submenu{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sidebar-submenu1{
+    display:flex;
+    flex-direction: row;
+   }
+  .sidebar-title{
+    font-size:10px;
+  }
+  
+  
+  .mui_icons1{
+    transform:scale(0.4);
+    color:yellow;
+  }
+  
+  
+  .arrow{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .navigating-arrow{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    color:#e1dede;
+  
+  
+  }
