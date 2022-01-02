@@ -7,8 +7,6 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { makeStyles } from "@mui/styles";
-import Button from "@mui/material/Button";
-import { red } from "@mui/material/colors";
 
 function App() {
   return (
