@@ -26,9 +26,7 @@ import {
   Button,
   FormControl,
   InputGroup,
-  Container,
-  Row,
-} from "react-bootstrap";
+  } from "react-bootstrap";
 
 const useStyles = makeStyles({
   iconButton: {

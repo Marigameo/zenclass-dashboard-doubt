@@ -9,9 +9,9 @@ import BuildIcon from "@mui/icons-material/Build";
 import FolderIcon from "@mui/icons-material/Folder";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import TableChartIcon from "@mui/icons-material/TableChart";
-import { useState, createContext } from "react";
-import { Link, Switch, Route } from "react-router-dom";
-import { Dashboard1 } from "../OtherComponent/statistics";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import Grid from "@mui/material/Grid";
 
 const sideBarcomponents = [
