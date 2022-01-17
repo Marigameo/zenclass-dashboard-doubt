@@ -1,5 +1,4 @@
 import "./Sidebar.css";
-
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import IconButton from "@mui/material/IconButton";
@@ -10,8 +9,10 @@ import BuildIcon from "@mui/icons-material/Build";
 import FolderIcon from "@mui/icons-material/Folder";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import TableChartIcon from "@mui/icons-material/TableChart";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, createContext } from "react";
+import { Link, Switch, Route } from "react-router-dom";
+import { Dashboard1 } from "../OtherComponent/statistics";
+import Grid from "@mui/material/Grid";
 
 const sideBarcomponents = [
   {
@@ -51,6 +52,7 @@ const sideBarcomponents = [
     subheading: "",
   },
 ];
+//SidemenuOptions component
 function SidemenuOptions({ ptitle, picon, parrow, plink, pline, psubheading }) {
   console.log(sideBarcomponents);
   return (
@@ -68,7 +70,7 @@ function SidemenuOptions({ ptitle, picon, parrow, plink, pline, psubheading }) {
 
       <div className="sidebar-submenu">
         <div className="sidebar-submenu1">
-          <Link to="{plink}">
+          <Link to={plink}>
             <IconButton style={{ color: "#9f9fb4", transform: "scale(0.6)" }}>
               {picon}
             </IconButton>
@@ -87,12 +89,17 @@ function SidemenuOptions({ ptitle, picon, parrow, plink, pline, psubheading }) {
         </div>
 
         <div className="arrow">
-          <IconButton style={{ color: "#9f9fb4", transform: "scale(0.4)" }}>{parrow}</IconButton>
+          <IconButton style={{ color: "#9f9fb4", transform: "scale(0.4)" }}>
+            {parrow}
+          </IconButton>
         </div>
       </div>
-    </div> //end of sidebar menu
+    </div> //end of SidemenuOptions menu
   );
 }
+
+//end of sidebar menu
+
 export function Sidebar() {
   const [setWidth, setWidthSidebar] = useState(180);
   const styles = { width: setWidth };
@@ -112,6 +119,7 @@ export function Sidebar() {
             </p>
           </div>
         </div>
+
         <div class="line"></div>
         <div className="sidebar-submenu1">
           <Link to="/dashboard">
@@ -141,7 +149,8 @@ export function Sidebar() {
                 parrow={m.arrow}
                 plink={m.link}
                 pline={m.line}
-                psubheading={m.subheading} />
+                psubheading={m.subheading}
+              />
             ))}
           </li>
         </ul>
@@ -157,6 +166,42 @@ export function Sidebar() {
           </IconButton>
         </div>
       </div>
+    </div>
+  );
+}
+
+export function Dashboardcomponent1() {
+  const styles = {
+    backgroundColor: "whitesmoke",
+    borderRadius: "5px",
+    padding: "10px",
+    borderLeft: "10px solid red",
+    fontSize: "10px",
+  };
+  return (
+    <div>
+      <div style={{ margin: "10px" }}>
+        <h2>Dashboard</h2>
+      </div>
+
+      <Grid container spacing={2} style={{ margin: "10px" }}>
+        <Grid xs={12} sm={6} lg={3} style={styles}>
+          <p>EARNINGS(MONTHLY)</p>
+          <p>$40,000</p>
+        </Grid>
+        <Grid xs={12} sm={6} lg={3} style={styles}>
+          <p>EARNINGS(MONTHLY)</p>
+          <p>$40,000</p>
+        </Grid>
+        <Grid xs={12} sm={6} lg={3} style={styles}>
+          <p>EARNINGS(MONTHLY)</p>
+          <p>$40,000</p>
+        </Grid>
+        <Grid xs={12} sm={6} lg={3} style={styles}>
+          <p>EARNINGS(MONTHLY)</p>
+          <p>$40,000</p>
+        </Grid>
+      </Grid>
     </div>
   );
 }
