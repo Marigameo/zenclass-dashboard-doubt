@@ -2,7 +2,6 @@ import "./Navigationbar.css";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { FaSearch } from "react-icons/fa";
-import Grid from "@mui/material/Grid";
 
 import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
@@ -22,11 +21,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import Divider from "@mui/material/Divider";
 import makeStyles from "@mui/styles/makeStyles";
 import { useState } from "react";
-import {
-  Button,
-  FormControl,
-  InputGroup,
-  } from "react-bootstrap";
+import { Button, FormControl, InputGroup } from "react-bootstrap";
 
 const useStyles = makeStyles({
   iconButton: {
@@ -149,7 +144,9 @@ export function Navigationbar() {
           </InputGroup>
 
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: "flex", flexDirection: "row",overflow: "hidden"}}>
+          <Box
+            sx={{ display: "flex", flexDirection: "row", overflow: "hidden" }}
+          >
             <IconButton
               size=""
               aria-label="show 17 new notifications"
